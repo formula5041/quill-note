@@ -1,53 +1,50 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 // UI modules
 import { Grid } from '@nextui-org/react';
 import { IoMdSave } from "react-icons/io";
-
+// components
 import Button from './components/nextui/Button'
+import Text from './components/nextui/Text'
+import Header from './components/layout/Header'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   const saveFunc = () =>{
-    console.log('Content is saved!')
     setCount((count) => count + 1)
   }
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
+      <Header/>
+      {/* <div>
         <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={atomLogo} className="logo" alt="atom logo" />
         </a>
-      </div>
-      <h1>Quill Note</h1>
-      <div className="card">
-        {/* <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button> */}
-        <Grid.Container gap={2} justify="center">
-          <Grid xs={12} justify="center" alignItems="center">
-            <Button
-              shadow={true}
-              size="md"
-              color="success"
-              icon={<IoMdSave size={24}/>}
-              iconName={count}
-              clickHandler={saveFunc}
-            />
-          </Grid>
-        </Grid.Container>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
+      </div> */}
+      <Text
+        text="Quill Note"
+        size={70}
+        css={{
+          textGradient: "45deg, $blue600 -20%, $green800 80%",
+          margin: 0,
+        }}
+      />
+      <Grid.Container gap={2} justify="center">
+        <Grid justify="center" alignItems="center">
+          <Button
+            shadow={true}
+            size="md"
+            color="success"
+            icon={<IoMdSave size={24}/>}
+            iconName={count}
+            clickHandler={saveFunc}
+          />
+        </Grid>
+      </Grid.Container>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Click on the atom logos to learn more...
       </p>
     </div>
   )

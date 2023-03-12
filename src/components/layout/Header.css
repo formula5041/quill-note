@@ -1,0 +1,6 @@
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #5F8C85;
+}
