@@ -1,6 +1,16 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* header range 60px */
+  height: 60px; 
   display: flex;
   justify-content: start;
   align-items: center;
   background-color: #5F8C85;
+}
+.nav-items{
+  margin-left: 20px;
+  display: flex;
 }

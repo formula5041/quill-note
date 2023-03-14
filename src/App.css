@@ -8,6 +8,8 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.section-search {
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 60px;
 }

@@ -5,7 +5,6 @@ import { IoMdSave } from "react-icons/io";
 // components
 import Button from './components/nextui/Button'
 import Text from './components/nextui/Text'
-import Header from './components/layout/Header'
 import './App.css'
 
 function App() {
@@ -16,15 +15,9 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header/>
-      {/* <div>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={atomLogo} className="logo" alt="atom logo" />
-        </a>
-      </div> */}
+    <section className="section-search">
       <Text
-        text="Quill Note"
+        text="Searching Quill"
         size={70}
         css={{
           textGradient: "45deg, $blue600 -20%, $green800 80%",
@@ -40,13 +33,39 @@ function App() {
             icon={<IoMdSave size={24}/>}
             iconName={count}
             clickHandler={saveFunc}
+            css={{
+              background: '$white',
+              fontWeight: '$semibold',
+              boxShadow: '$md',
+              position: 'relative',
+              overflow: 'visible',
+              color: '#0F9549',
+              px: '$18',
+              '&:after': {
+                content: '""',
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+                background: '$white',
+                opacity: 1,
+                borderRadius: '$pill',
+                transition: 'all 0.4s ease'
+              },
+              '&:hover': {
+                transform: 'translateY(-5px)',
+                '&:after': {
+                  transform: 'scaleX(1.5) scaleY(1.6)',
+                  opacity: 0
+                }
+              },
+              '&:active': {
+                transform: 'translateY(-2px)'
+              }
+            }}
           />
         </Grid>
       </Grid.Container>
-      <p className="read-the-docs">
-        Click on the atom logos to learn more...
-      </p>
-    </div>
+    </section>
   )
 }
 
