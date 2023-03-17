@@ -13,3 +13,10 @@
   margin: 0 auto;
   margin-top: 60px;
 }
+
+.articleBlock-container-style{
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}

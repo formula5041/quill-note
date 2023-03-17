@@ -45,6 +45,7 @@ const App = () =>{
               padding: '6px',
               background: '#00000050',
             }}
+            spacerX={true}
           />
         )}
       </div>
