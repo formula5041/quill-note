@@ -1,12 +1,13 @@
 // components
 import Search from './components/layout/Search'
 import ArticleBlock from './components/layout/ArticleBlock'
+import Pagination from './components/nextui/Pagination'
 import './App.css'
 
 function App() {
 
   return (
-    <section className="section-search">
+    <section className="section-container-style">
       <Search/>
       <div className='articleBlock-container-style'>
         <ArticleBlock
@@ -33,6 +34,12 @@ function App() {
           icon='FaGithub'
           title='Which Git Control Application Is Faster And Efficiency?'
           content='technology-content'
+        />
+      </div>
+      <div className='pagination-style'>
+        <Pagination 
+          count={10}
+          color='success'
         />
       </div>
     </section>

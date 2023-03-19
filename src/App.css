@@ -8,7 +8,7 @@
   padding: 2em;
 }
 
-.section-search {
+.section-container-style {
   max-width: 1024px;
   margin: 0 auto;
   margin-top: 60px;
@@ -19,4 +19,8 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+}
+
+.pagination-style{
+  margin: 20px;
 }

@@ -1,0 +1,13 @@
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer-top{
+  width: 100%;
+  background-color: #383838;
+}
+.footer-bottom {
+  width: 100%;
+  background-color: #080808;
+}
